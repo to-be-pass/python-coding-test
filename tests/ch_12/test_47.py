@@ -21,8 +21,8 @@ def setup(request):
     return request.param
 
 
-@pytest.mark.ch_1
-def test_1(module, test_input):
+@pytest.mark.ch_12
+def test_8(module, test_input):
     # given
     num, excepted = test_input
 

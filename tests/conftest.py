@@ -1,6 +1,7 @@
 import pytest
 import os
 import re
+from dotenv import load_dotenv
 
 
 def get_test_file_path(file_path, user_id):
@@ -18,10 +19,16 @@ def get_test_file_path(file_path, user_id):
 
 
 def pytest_addoption(parser):
+    # .env 파일을 현재 작업 디렉토리에서 읽어옴
+    load_dotenv()
+
+    # 환경 변수 읽기
+    USER_ID = os.getenv("USER_ID")
+
     parser.addoption(
         "--id",
         action="store",
-        default="tiaz0128",
+        default=USER_ID,
         help="디버깅을 하고 싶은 경우 자신의 아디값을 넣어주세요",
     )
 
