@@ -1,2 +1,2 @@
-def solution():
-    return 
+def solution(arr1, arr2):
+    return

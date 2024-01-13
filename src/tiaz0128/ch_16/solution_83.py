@@ -1,2 +1,2 @@
-def solution():
-    return 
+def solution(people, limit):
+    return
