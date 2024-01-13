@@ -1,0 +1,45 @@
+name: Auto Create Folder
+
+on:
+  workflow_dispatch:
+    # inputs:
+    #   reviewers:
+    #     description: 'Comma-separated list of reviewers'
+    #     required: false
+
+jobs:
+  create-folder:
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v4
+  
+    - name: Set up Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+
+    - name: Npm install
+      run: npm install js-yaml
+
+    - name: Create Folder on Main Branch
+      run: node .github/create_folder.js
+
+    - name: Delete tmp
+      run: |
+        rm -rf node_modules/
+        rm -rf package-lock.json
+        rm -rf cached package.json
+
+    - name: Commit Main Branch
+      run: |
+        echo "${{ secrets.PERSONAL_ACCESS_TOKEN }}" > private-key.pem
+        chmod 600 private-key.pem
+        git config --global user.email "actions@github.com"
+        git config --global user.name "GitHub Actions"
+        git add src
+        git commit -m "Auto-create folders"
+        GIT_SSH_COMMAND="ssh -i private-key.pem" git push origin main
+      env:
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}

@@ -1,0 +1,22 @@
+name: Open PR
+
+on:
+  pull_request:
+    branches:
+      - '**/ch_*'
+    types:
+      - opened
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+          pullRequestOpened: |
+            👋 @{{ author }} 님 안녕하세요!
+            
+            PR을 생성하고 `push` 하게 되면 자동으로 테스트가 동작합니다.
+            테스트가 실패한 경우 다시 한번 문제를 풀어서 `push` 해보세요!
