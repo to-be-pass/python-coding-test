@@ -9,7 +9,6 @@
  # A list of reviewers to be added to pull requests (GitHub user name)
  reviewers:
    - tiaz0128
-   - devlinarena
 
 
  # A number of reviewers added to the pull request

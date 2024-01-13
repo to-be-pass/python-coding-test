@@ -1,2 +1,2 @@
 def solution():
-    return True
+    return "TEST"

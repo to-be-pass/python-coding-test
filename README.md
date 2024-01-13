@@ -1,8 +1,11 @@
+
+
 # TO-BE 레포로 공부하는 방법
 
-| `PR` (Pull Request) 를 작성하면 자동으로 테스트가 동작합니다.
-| 서로의 코드를 보면서 피드벡을 받으며 서로 으쌰으쌰 해봅시다.
-| 로컬에서 디버깅 하면서 공부 할 수도 있습니다.
+> ✨ 이 스터디는 아무런 조건도 제약도 없는 자유로운 스터디 입니다. <br/>
+> `PR` (Pull Request) 를 작성하면 자동으로 테스트가 동작합니다. <br/>
+> 서로의 코드를 보면서 피드벡을 받으며 서로 으쌰으쌰 해봅시다. <br/>
+> 로컬에서 디버깅 하면서 공부 할 수도 있습니다. <br/>
 
 - 테스트에 사용하는 파이썬 버젼은 프로그래머스와 동일한 `python 3.8` 버젼입니다.
 - 아래의 설명을 보면서 따라해 봅시다.
@@ -11,13 +14,37 @@
 
 <br/>
 
+## 서로서로 리뷰해 보자
+
+- PR 을 생성하면 자동으로 스터디원중 한명이 리뷰어로 선택됩니다.
+- 리뷰는 100% 자유입니다. 하면 좋고 아니여도 좋습니다.
+- 다른 사람의 PR 을 보면서 공부하고 서로 소통해 보세요!
+
+<br/>
+
 ## 알람 끄기
 
-- 기본적으로 테스트 수행에 대한 이메일이 갑니다.
+- 기본적으로 테스트 수행에 대한 알람이 이메일이 갑니다.
 - 자주 알람이 오거나 필요없는 경우에는 해제 하시면 됩니다.
 - 해당 저장소 화면 오른쪽 상단에 `Notifications` 을 `watch` 에서 `Ignore` 로 변경 해주세요.
 
-<img src="asset/img/alarm.png" alt="Alt text" width="200px" height="auto" />
+<img src="asset/img/alarm.png" alt="Alt text" width="300px" height="auto" />
+
+<br/>
+
+<br/>
+
+# ✨ 여기서 부터 해당 저장소를 사용하는 방법입니다.
+
+## 0. 참여 방법
+
+1. 참여 의사가 있으신 분은 깃허브 아이디를 알려주세요.
+2. 초대 메일이 가면 반드시 승인이 필요합니다.
+3. 깃 clone 부터 시작하시면 됩니다!
+
+```shell
+git clone https://github.com/to-be-pass/to-be-pass-python-coding-test.git
+```
 
 <br/>
 
@@ -76,19 +103,24 @@ pytest --id=아이디 -k 'test_번호'
 
 <br/>
 
-## 5. 또는 깃허브 PR(Pull Request) 생성해서 확인
 
-<img src="asset/img/pr.png" alt="Alt text" width="450px" height="auto" />
+## 5. 브랜치 push
 
 - 브랜치 명은 `아이디/ch_번호` 로 생성해서 `push` 합니다.
-- `ch_번호` 를 base 로 지정하고 `아이디/ch_번호` 를 compare 브랜치로 지정합니다.
-- 위의 PR 을 생성합니다.
-- 깃허브에서 PR 작성 -> 자동으로 액션이 동작
-- 정답을 확인
 
 ```shell
 git push origin 아이디/ch_번호
 ```
+
+## 6. 또는 깃허브 PR(Pull Request) 생성해서 확인
+
+<img src="asset/img/pr.png" alt="Alt text" width="550px" height="auto" />
+
+- PR 을 생성 합니다.
+- `ch_번호` 를 base 로 지정하고 `아이디/ch_번호` 를 compare 브랜치로 지정합니다.
+- 깃허브에서 PR 작성하면 자동으로 테스트가 동작하고 정답을 확인합니다.
+
+<br/>
 
 <br/>
 
@@ -96,20 +128,16 @@ git push origin 아이디/ch_번호
 
 - PR 생성 후 `push` 할때마다 테스트가 동작합니다.
 - PR 에서는 해당 챕터의 전체 문제를 테스트 합니다.
-- 마지막까지 더 이상 문제를 못하는 경우에는 강제로 `merge` 해줍니다.
+- 마지막까지 더 이상 문제를 풀지 못한 경우에는 강제로 `merge` 해줍니다.
 
-<img src="asset/img/forced_merge.png" alt="Alt text" width="450px" height="auto" />
-
-```shell
-git push origin 아이디/ch_번호
-```
+<img src="asset/img/forced_merge.png" alt="Alt text" width="550px" height="auto" />
 
 <br/>
 
 ## 6-1. PR 테스트 성공 시
 
-- `push` 이후에 테스트를 통과하면 `merge` 합니다.
-- 다른 사람의 PR 을 보면서 공부하고 서로 소통해 보세요!
+- 테스트를 통과하면 `merge` 합니다.
+- 시간이 있으면 다른 사람의 PR 을 보면서 공부하고 서로 소통해 보세요!
 
 ```shell
 git push origin 아이디/ch_번호
