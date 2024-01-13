@@ -13,8 +13,24 @@ def setup_module(user_id, func):
 @pytest.fixture(
     name="test_input",
     params=[
-        (1, False),
-        (2, False),
+        (
+            3,
+            [
+                ["u", 0, 1],
+                ["u", 1, 2],
+                ["f", 2],
+            ],
+            1,
+        ),
+        (
+            4,
+            [
+                ["u", 0, 1],
+                ["u", 2, 3],
+                ["f", 0],
+            ],
+            2,
+        ),
     ],
 )
 def setup(request):
