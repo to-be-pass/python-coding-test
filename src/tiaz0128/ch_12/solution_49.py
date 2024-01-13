@@ -1,2 +1,2 @@
-def solution(cur_k, cnt, dungeons, visited):
+def solution(k, dungeons):
     return

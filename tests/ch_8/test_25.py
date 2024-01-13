@@ -23,7 +23,11 @@ def setup_module(user_id, func):
             [2, 3, 5],
             ["ACD", "AD", "ADE", "CD", "XYZ"],
         ),
-        (["XYZ", "XWY", "WXA"], [2, 3, 4], ["WX", "XY"]),
+        (
+            ["XYZ", "XWY", "WXA"],
+            [2, 3, 4],
+            ["WX", "XY"],
+        ),
     ],
 )
 def setup(request):

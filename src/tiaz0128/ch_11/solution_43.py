@@ -1,2 +1,2 @@
-def solution(N, road, K):
+def solution(n, computers):
     return

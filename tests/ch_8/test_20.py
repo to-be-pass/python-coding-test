@@ -13,21 +13,13 @@ def setup_module(user_id, func):
 @pytest.fixture(
     name="test_input",
     params=[
-        (
-            ["leo", "kiki", "eden"],
-            ["eden", "kiki"],
-            "leo",
-        ),
+        (["leo", "kiki", "eden"], ["eden", "kiki"], "leo"),
         (
             ["marina", "josipa", "nikola", "vinko", "filipa"],
             ["josipa", "filipa", "marina", "nikola"],
             "vinko",
         ),
-        (
-            ["mislav", "stanko", "mislav", "ana"],
-            ["stanko", "ana", "mislav"],
-            "mislav",
-        ),
+        (["mislav", "stanko", "mislav", "ana"], ["stanko", "ana", "mislav"], "mislav"),
     ],
 )
 def setup(request):

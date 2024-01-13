@@ -49,7 +49,11 @@ def setup_module(user_id, func):
             ],
             [0, 0],
         ),
-        (2, ["hello", "one", "even", "never", "now", "world", "draw"], [1, 3]),
+        (
+            2,
+            ["hello", "one", "even", "never", "now", "world", "draw"],
+            [1, 3],
+        ),
     ],
 )
 def setup(request):
