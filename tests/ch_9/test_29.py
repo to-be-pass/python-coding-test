@@ -13,8 +13,20 @@ def setup_module(user_id, func):
 @pytest.fixture(
     name="test_input",
     params=[
-        (1, False),
-        (2, False),
+        (
+            ["john", "mary", "edward", "sam", "emily", "jaimie", "tod", "young"],
+            ["-", "-", "mary", "edward", "mary", "mary", "jaimie", "edward"],
+            ["young", "john", "tod", "emily", "mary"],
+            [12, 4, 2, 5, 10],
+            [360, 958, 108, 0, 450, 18, 180, 1080],
+        ),
+        (
+            ["john", "mary", "edward", "sam", "emily", "jaimie", "tod", "young"],
+            ["-", "-", "mary", "edward", "mary", "mary", "jaimie", "edward"],
+            ["sam", "emily", "jaimie", "edward"],
+            [2, 3, 5, 4],
+            [0, 110, 378, 180, 270, 450, 0, 0],
+        ),
     ],
 )
 def setup(request):
@@ -22,12 +34,12 @@ def setup(request):
 
 
 @pytest.mark.ch_9
-def test_8(module, test_input):
+def test(module, test_input):
     # given
-    num, excepted = test_input
+    *args, excepted = test_input
 
     # when
-    result = module.solution()
+    result = module.solution(*args)
 
     # then
     assert result == excepted

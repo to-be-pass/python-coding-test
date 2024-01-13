@@ -22,12 +22,12 @@ def setup(request):
 
 
 @pytest.mark.ch_5
-def test_7(module, test_input):
+def test(module, test_input):
     # given
-    dirs, excepted = test_input
+    *args, excepted = test_input
 
     # when
-    result = module.solution(dirs)
+    result = module.solution(*args)
 
     # then
     assert result == excepted

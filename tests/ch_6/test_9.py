@@ -23,12 +23,12 @@ def setup(request):
 
 
 @pytest.mark.ch_6
-def test_9(module, test_input):
+def test(module, test_input):
     # given
-    decimal, excepted = test_input
+    *args, excepted = test_input
 
     # when
-    result = module.solution(decimal)
+    result = module.solution(*args)
 
     # then
     assert result == excepted

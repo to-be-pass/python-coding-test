@@ -1,2 +1,2 @@
-def solution():
-    return 
+def solution(id_list, report, k):
+    return
