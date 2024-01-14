@@ -157,7 +157,7 @@ git push origin 아이디/ch_번호
 
 <br/>
 
-## 7. 또는 깃허브 PR(Pull Request) 생성해서 확인
+## 7. 깃허브 PR(Pull Request) 생성
 
 <img src="asset/img/pr.png" alt="Alt text" width="550px" height="auto" />
 
