@@ -1,10 +1,25 @@
 # TO-BE 레포로 공부하는 방법
 
 > ✨이 저장소는 '코딩 테스트 합격자 되기(파이썬 편)' 을 연습 할 수 있는 저장소입니다. <br/><br/>
+
+<br/>
+
+<div style="text-align: center;">
+    <img src="asset/img/book.png" alt="Alt text" width="300px" height="auto"
+         style="display: inline-block; vertical-align: middle;"
+     />
+</div>
+<br/>
+
+## 😊 스터디 특징
+
 > ✅ 해당 레포는 아무런 조건도 제약도 없는 자유로운 스터디 입니다. <br/>
 > ✅ `PR` (Pull Request) 를 작성하면 자동으로 테스트가 동작합니다. <br/>
 > ✅ 서로의 코드를 보면서 피드벡을 받으며 서로 으쌰으쌰 해봅시다. <br/>
 > ✅ 로컬에서 디버깅 하면서 공부 할 수도 있습니다. <br/>
+
+
+## 🔥 저장소 유의사항
 
 - 테스트에 사용하는 파이썬 버젼은 프로그래머스와 동일한 `python 3.8` 버젼입니다.
 - 아래의 설명을 보면서 따라해 봅시다.
@@ -43,9 +58,19 @@
 
 ## 0. 참여 방법
 
-1. 참여 의사가 있으신 분은 깃허브 아이디를 알려주세요.
-2. 초대 메일이 가면 반드시 승인이 필요합니다.
-3. 깃 clone 부터 시작하시면 됩니다!
+1. 책 저자님이 직접 운영하시는 소통 채널로 입장해주세요.
+2. '통붕이' 또는 'tiaz0128' 또는 'TO-BE 스터디' 참여하고 싶다고 알려주세요.
+3. 참여 의사가 있으신 분은 깃허브 아이디를 알려주세요.
+4. 저장소 초대 메일이 가면 승인해주세요.
+
+| 채널 | 링크 |
+|----------|----------|
+| 카카오톡 단톡방 | [링크](https://open.kakao.com/o/gX0WnTCf) |
+| 디스코드 | [링크](https://discord.gg/3AfpGcTWr5) |
+
+## 1. git clone
+
+- 깃 clone 부터 시작하시면 됩니다!
 
 ```shell
 git clone https://github.com/to-be-pass/to-be-pass-python-coding-test.git
