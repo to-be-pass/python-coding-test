@@ -13,15 +13,28 @@ def setup_module(user_id, func):
 @pytest.fixture(
     name="test_input",
     params=[
-        ([[1, 3, 3, 2], [2, 1, 4, 1], [1, 5, 2, 3]], 19),
-        ([[1, 7, 13, 2, 6], [2, -4, 2, 5, 4], [5, 3, 5, -3, 1]], 32),
+        (
+            ["ABCFG", "AC", "CDE", "ACDE", "BCFG", "ACDEH"],
+            [2, 3, 4],
+            ["AC", "ACDE", "BCFG", "CDE"],
+        ),
+        (
+            ["ABCDE", "AB", "CD", "ADE", "XYZ", "XYZ", "ACD"],
+            [2, 3, 5],
+            ["ACD", "AD", "ADE", "CD", "XYZ"],
+        ),
+        (
+            ["XYZ", "XWY", "WXA"],
+            [2, 3, 4],
+            ["WX", "XY"],
+        ),
     ],
 )
 def setup(request):
     return request.param
 
 
-@pytest.mark.ch_15
+@pytest.mark.ch_08
 def test(module, test_input):
     # given
     *args, excepted = test_input
