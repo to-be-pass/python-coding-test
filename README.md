@@ -1,13 +1,12 @@
 # TO-BE 레포로 공부하는 방법
 
-> ✨이 저장소는 '코딩 테스트 합격자 되기(파이썬 편)' 을 연습 할 수 있는 저장소입니다. <br/><br/>
+> ✨이 저장소는 '코딩 테스트 합격자 되기(파이썬 편)' 을 연습 할 수 있는 저장소입니다. <br/>
 
 <br/>
+<br/>
 
-<div style="text-align: center;">
-    <img src="asset/img/book.png" alt="Alt text" width="300px" height="auto"
-         style="display: inline-block; vertical-align: middle;"
-     />
+<div align=center>
+    <img src="asset/img/book.png" width="300px" height="auto" />
 </div>
 <br/>
 
