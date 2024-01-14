@@ -21,7 +21,7 @@ jobs:
         node-version: '18'
 
     - name: Npm install
-      run: npm install js-yaml
+      run: npm install js-yaml ncp
 
     - name: Create Folder on Main Branch
       run: node .github/create_folder.js
