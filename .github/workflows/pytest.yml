@@ -44,7 +44,7 @@ jobs:
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install pytest
+        pip install pytest python-dotenv
 
     - name: Run pytest
       run: pytest --id=${{ github.actor }} -m ${{ needs.extract_chapter.outputs.chapter }}
