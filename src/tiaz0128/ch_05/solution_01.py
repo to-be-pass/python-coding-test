@@ -1,2 +1,2 @@
 def solution(arr):
-    return "test"
+    return "test 2"
