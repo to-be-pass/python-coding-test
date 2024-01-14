@@ -86,9 +86,10 @@ git clone https://github.com/to-be-pass/to-be-pass-python-coding-test.git
 
 1. 해당 챕터 브랜치로 `checkout` 합니다.
 2. 브랜치 명은 `아이디/ch_번호` 로 생성합니다.
+3. 챕터 5~9 는 앞에 0을 붙여서 브랜치를 생성합니다. ex) `ch_05`, `ch_06`
 
 ```shell
-git checkout ch_번호
+git checkout -t origin/ch_번호
 
 git checkout -b 아이디/ch_번호
 ```
