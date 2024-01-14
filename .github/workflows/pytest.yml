@@ -75,6 +75,11 @@ jobs:
       uses: wow-actions/auto-comment@v1
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        pullRequestOpened: |
+           ❌ @{{author}} 님. 아쉽습니다.
+           
+           테스트에 실패했습니다.
+           다시 한번 문제를 풀고, `push` 하고 테스트를 통과해보세요!
 
         pullRequestSynchronize: |
            ❌ @{{author}} 님. 아쉽습니다.
@@ -92,6 +97,12 @@ jobs:
       with:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+        pullRequestOpened: |
+            🎉 @{{ author }} 님. 축하 합니다! 
+            
+            test에 통과했습니다!
+            `${{ needs.extract_chapter.outputs.chapter }}` 브랜치에 Merge 해주세요!
+    
         pullRequestSynchronize: |
             🎉 @{{ author }} 님. 축하 합니다! 
             
