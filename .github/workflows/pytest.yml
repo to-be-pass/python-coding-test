@@ -22,7 +22,24 @@ jobs:
       run: echo "chapter=$(echo '$GITHUB_BASE_REF' | sed 's|refs/heads/||' | cut -d/ -f2-)" >> $GITHUB_OUTPUT
     - name: Prink Chapter
       run: echo ${{ steps.extract.outputs.chapter }}
-      
+  
+  hello-comment:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Auto Comment on Pull Request
+        if: github.event_name == 'pull_request' && github.event.action == 'opened'
+        uses: wow-actions/auto-comment@v1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          pullRequestOpened: |
+            👋 @{{ author }} 님 안녕하세요!
+            
+            1. PR을 생성하고 `push` 하게 되면 자동으로 테스트가 동작합니다.
+            2. 테스트가 실패한 경우 다시 한번 문제를 풀어서 `push` 해보세요!
+            3. PR이 등록되면 리뷰어 한명이 지정됩니다. (강제는 아닙니다.)
+            4. 자신의 코드를 리뷰도 받아보고 지정된 리뷰도 해보세요!
+
   test:
     runs-on: ubuntu-latest
     needs: extract_chapter
