@@ -29,7 +29,7 @@ def pytest_addoption(parser):
         "--id",
         action="store",
         default=USER_ID,
-        help="디버깅을 하고 싶은 경우 자신의 아디값을 넣어주세요",
+        help="여기를 수정하지 마세요!!! .tests/.env 파일에 테스트하고 싶은 아이디를 넣어주세요!!",
     )
 
 
