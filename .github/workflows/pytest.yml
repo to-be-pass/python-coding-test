@@ -69,7 +69,7 @@ jobs:
   review-fail:
     runs-on: ubuntu-latest
     needs: test
-    if: failure()
+    if: success()
     steps:
     - name: if fail test 
       uses: wow-actions/auto-comment@v1
