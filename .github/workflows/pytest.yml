@@ -85,7 +85,7 @@ jobs:
 
   test:
     runs-on: ubuntu-latest
-    needs: extract-num
+    needs: [extract-num, hello-comment]
 
     strategy:
       matrix:
