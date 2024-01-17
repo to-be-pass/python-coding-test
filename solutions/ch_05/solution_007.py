@@ -1,2 +1,2 @@
 def solution(dirs):
-    return
+    return "test"
