@@ -1,2 +1,2 @@
 def solution(lst):
-    return "TEST"
+    return
