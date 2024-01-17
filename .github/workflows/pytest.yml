@@ -151,6 +151,25 @@ jobs:
     needs: [test, extract-num]
     if: failure()
     steps:
+    - name: Remove Success Label if exists
+      uses: actions/github-script@v5
+      with:
+        script: |
+          const issue = await github.rest.issues.get({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo
+          });
+          const hasFailLabel = issue.data.labels.some(label => label.name === 'pass');
+          if (hasFailLabel) {
+            // pass 라벨 삭제
+            await github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'pass'
+            });
+          }
     - name: Add Fail Label
       uses: actions/github-script@v5
       with:
@@ -189,11 +208,30 @@ jobs:
     needs: [extract-num, test]
     if: success()
     steps:
+    - name: Remove Fail Label if exists
+      uses: actions/github-script@v5
+      with:
+        script: |
+          const issue = await github.rest.issues.get({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo
+          });
+          const hasFailLabel = issue.data.labels.some(label => label.name === 'fail');
+          if (hasFailLabel) {
+            // fail 라벨 삭제
+            await github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: 'fail'
+            });
+          }
     - name: Add Fail Label
       uses: actions/github-script@v5
       with:
         script: |
-          // fail 라벨 추가
+          // pass 라벨 추가
           await github.rest.issues.addLabels({
             issue_number: context.issue.number,
             owner: context.repo.owner,
