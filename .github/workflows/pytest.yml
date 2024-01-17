@@ -106,8 +106,11 @@ jobs:
         python -m pip install --upgrade pip
         pip install pytest python-dotenv
 
+    - name: Dir List
+      run: ls -al
+
     - name: Run pytest
-      run: pytest --id=${{ github.actor }} -k 'test_${{needs.extract-num.outputs.num}}'
+      run: pytest --id=${{ github.actor }} -k '${{ needs.extract-num.outputs.num }}'
 
   create-and-add-label:
     runs-on: ubuntu-latest
