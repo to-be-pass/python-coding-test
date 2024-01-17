@@ -250,7 +250,7 @@ jobs:
             soluton 브랜치에 Merge 해주세요!
 
             도움이 필요한 사람들이 있으면 도와주세요! 소통하면서 더 성장 할 수 있는 좋은 기회입니다!
-            [문제 ${{needs.extract-num.outputs.num}} - 도움주러 가기](${{github.server_url}}/${{github.repository}}/pulls?q=is%3Apr+label%3A문제${{needs.extract-num.outputs.num}})
+            [문제 ${{needs.extract-num.outputs.num}} - 도움주러 가기](${{github.server_url}}/${{github.repository}}/pulls?q=is%3Apr+label%3A"도움이+필요해요%21"+label%3A문제${{needs.extract-num.outputs.num}})
     
         pullRequestSynchronize: |
             🎉 @{{ author }} 님. 축하 합니다! 
@@ -259,5 +259,5 @@ jobs:
             soluton 브랜치에 Merge 해주세요!
 
             도움이 필요한 사람들이 있으면 도와주세요! 소통하면서 더 성장 할 수 있는 좋은 기회입니다!
-            [문제 ${{needs.extract-num.outputs.num}} - 도움주러 가기](${{github.server_url}}/${{github.repository}}/pulls?q=is%3Apr+label%3A문제${{needs.extract-num.outputs.num}})
+            [문제 ${{needs.extract-num.outputs.num}} - 도움주러 가기](${{github.server_url}}/${{github.repository}}/pulls?q=is%3Apr+label%3A"도움이+필요해요%21"+label%3A문제${{needs.extract-num.outputs.num}})
     
