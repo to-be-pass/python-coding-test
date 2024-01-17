@@ -86,7 +86,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     needs: [extract-num, hello-comment]
-
+    if: always()
     strategy:
       matrix:
         python-version:
