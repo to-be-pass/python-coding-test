@@ -1,2 +1,2 @@
 def solution(N, stages):
-    return
+    return "합격자 되기!"
