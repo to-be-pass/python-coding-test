@@ -110,7 +110,7 @@ jobs:
       run: ls -al
 
     - name: Run pytest
-      run: pytest --id=${{ github.actor }} -k '${{ needs.extract-num.outputs.num }}'
+      run: pytest --id=dremdeveloper
 
   create-and-add-label:
     runs-on: ubuntu-latest
