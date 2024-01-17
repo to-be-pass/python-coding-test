@@ -227,6 +227,16 @@ jobs:
               name: 'fail'
             });
           }
+          const hasHelpLabel = issue.data.labels.some(label => label.name === '도움이 필요해요!');
+          if (hasHelpLabel) {
+            // 도움 라벨 삭제
+            await github.rest.issues.removeLabel({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              name: '도움이 필요해요!'
+            });
+          }
     - name: Add Fail Label
       uses: actions/github-script@v5
       with:
