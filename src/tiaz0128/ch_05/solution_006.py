@@ -1,6 +1,6 @@
 def solution(N, stages):
     answer = []
-    # 스테이지 별로 실패율 구해서
+    # 스테이지 별로 실패율 구해서...
 
     for stage_number in range(1, N + 1):
         # 성공한 사람 = 현재 스테이지보다 큰 값
