@@ -89,9 +89,11 @@
 
 ```json
 {
-    "editor.suggest.showFunctions": false,
+    "editor.suggest.showModules": false, 
     "editor.suggest.showClasses": false,
-    "editor.suggest.showModules": false 
+    "editor.suggest.showFunctions": false,
+    "editor.suggest.showReferences": false, 
+    "editor.suggest.showVariables": false,    
 }
 ```
 
