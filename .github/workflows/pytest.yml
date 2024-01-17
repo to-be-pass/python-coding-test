@@ -151,6 +151,17 @@ jobs:
     needs: [test, extract-num]
     if: failure()
     steps:
+    - name: Add Fail Label
+      uses: actions/github-script@v5
+      with:
+        script: |
+          // fail 라벨 추가
+          await github.rest.issues.addLabels({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            labels: ['fail']
+          });
     - name: if fail test 
       uses: wow-actions/auto-comment@v1
       with:
@@ -178,6 +189,17 @@ jobs:
     needs: [extract-num, test]
     if: success()
     steps:
+    - name: Add Fail Label
+      uses: actions/github-script@v5
+      with:
+        script: |
+          // fail 라벨 추가
+          await github.rest.issues.addLabels({
+            issue_number: context.issue.number,
+            owner: context.repo.owner,
+            repo: context.repo.repo,
+            labels: ['pass']
+          });
     - name: if pass test
       uses: wow-actions/auto-comment@v1
       with:
