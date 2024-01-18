@@ -247,13 +247,26 @@ git push origin 아이디/문제번호
 
 <br/>
 
-## 8-2. PR 테스트 성공 시
+## 8-2. PR 테스트 성공 시 : Merge 하기
 
-- 테스트를 통과하면 `solutions` 브랜치에 `merge`합니다.
+<img src="asset/img/merge.png" alt="Alt text" width="550px" height="auto" />
+
+- 테스트를 통과하면 깃허브에서 `solutions` 브랜치에 `merge`합니다.
+- `Merge pull request` 버튼을 클릭 하면 됩니다!
 - 같은 문제를 다른 사람은 어떻게 풀었는지 공부해보세요!
 - 다른 사람의 코드를 보면서 이해가 가지 않는 부분에 코멘트를 남겨서 질문도 해보세요!
-- 다음 문제도 다시 `solutions` 브랜치로 돌아서 하시면 됩니다!
 - `solutions` 브랜치에 `merge`하신 내용은 `main` 브랜치에 병합 해드립니다!
+
+## 9. 다음 문제로
+- 다음 문제도 다시 `solutions` 브랜치로 돌아서 하시면 됩니다!
+- 제일 처음 `solutions` 브랜치를 `-t` 옵션으로 만들었으니 바로 `checkout` 하면 됩니다!
+- 업데이트가 있을지 모르니 다음 문제를 풀기전 `pull` 하세요!
+
+```bash
+$ git checkout solutions
+
+$ git pull origin solutions
+```
 
 <br/>
 
