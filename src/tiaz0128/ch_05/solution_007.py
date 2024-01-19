@@ -1,28 +1,25 @@
-def is_valid_move(nx, ny):  # ➊ 좌표를 벗어나는지 체크하는 함수
-    return 0 <= nx < 11 and 0 <= ny < 11
-
-
-def update_location(x, y, dir):  # ➋ 명령어를 통해 다음 좌표를 결정
-    if dir == "U":
-        nx, ny = x, y + 1
-    elif dir == "D":
-        nx, ny = x, y - 1
-    elif dir == "L":
-        nx, ny = x - 1, y
-    elif dir == "R":
-        nx, ny = x + 1, y
-    return nx, ny
-
-
 def solution(dirs):
-    x, y = 5, 5
-    ans = set()  # ➌ 겹치는 좌표는 1개로 처리하기 위함
-    for dir in dirs:  # ➍ 주어진 명령어로 움직이면서 좌표 저장
-        nx, ny = update_location(x, y, dir)
-        if not is_valid_move(nx, ny):  # ➎ 벗어난 좌표는 인정하지 않음
+    pass_to_paths = set()
+
+    # 1. 캐릭터는 0, 0 에서 시작한다.
+    character = {"x": 0, "y": 0}
+
+    moving_x = {"R": 1, "L": -1}
+    moving_y = {"U": 1, "D": -1}
+
+    # 2. dirs 의 명령어의 방향에 따라서 움직인다
+    for direction in dirs:
+        move_to_x = character["x"] + moving_x.get(direction, 0)
+        move_to_y = character["y"] + moving_y.get(direction, 0)
+
+        # 3. 범위를 벗어나는 명령어는 무시
+        if (abs(move_to_x) > 5) or (abs(move_to_y) > 5):
             continue
-        # ➏ A에서 B로 간 경우 B에서 A도 추가해야 함(총 경로의 개수는 방향성이 없음)
-        ans.add((x, y, nx, ny))
-        ans.add((nx, ny, x, y))
-        x, y = nx, ny  # ➐ 좌표를 이동했으므로 업데이트
-    return len(ans) / 2
+        pass_to_paths.add((character["x"], character["y"], move_to_x, move_to_y))
+        pass_to_paths.add((move_to_x, move_to_y, character["x"], character["y"]))
+
+        character["x"] = move_to_x
+        character["y"] = move_to_y
+
+    # 4. 지나간 길들 중에서 유니크한 값만 뽑아 낸다.
+    return len(pass_to_paths) / 2
