@@ -223,11 +223,15 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         pullRequestOpened: |
+          ❌ 아래의 코드는 테스트를 통과하지 못했습니다.
+
            ```python
            ${{steps.package.outputs.content}}
            ```
     
         pullRequestSynchronize: |
+          ❌ 아래의 코드는 테스트를 통과하지 못했습니다.
+
           ```python
           ${{steps.package.outputs.content}}
           ```
@@ -321,11 +325,15 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
         pullRequestOpened: |
+           ✨ 아래의 코드는 테스트를 통과한 코드입니다.
+
            ```python
            ${{steps.package.outputs.content}}
            ```
     
         pullRequestSynchronize: |
+          ✨ 아래의 코드는 테스트를 통과한 코드입니다.
+
           ```python
           ${{steps.package.outputs.content}}
           ```
