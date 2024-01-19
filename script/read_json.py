@@ -3,9 +3,10 @@ import sys
 
 
 if __name__ == "__main__":
-    key = sys.argv[1]
+    path = sys.argv[1]
+    key = sys.argv[2]
 
-    with open("solutions.json", encoding="utf-8") as fp:
+    with open(f"{path}", encoding="utf-8") as fp:
         solutions = json.load(
             fp,
         )
