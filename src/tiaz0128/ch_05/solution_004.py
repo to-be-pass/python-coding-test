@@ -20,5 +20,7 @@ def solution(answers):
     #  - 여럿이면 오름 차순 정렬
     max_correct_cnt = max(result)
     return [
-        who for who, correct_cnt in enumerate(result) if correct_cnt == max_correct_cnt
+        who
+        for who, correct_cnt in enumerate(result, 1)
+        if correct_cnt == max_correct_cnt
     ]
