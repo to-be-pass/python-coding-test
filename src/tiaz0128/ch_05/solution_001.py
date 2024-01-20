@@ -1,2 +1,2 @@
 def solution(arr):
-    return sorted()
+    return sorted(arr)
