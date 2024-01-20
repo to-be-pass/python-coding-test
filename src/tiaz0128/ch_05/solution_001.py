@@ -1,3 +1,2 @@
 def solution(arr):
-    arr.sort()
-    return arr
+    return sorted(arr)
