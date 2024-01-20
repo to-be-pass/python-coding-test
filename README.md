@@ -93,7 +93,9 @@
     "editor.suggest.showClasses": false,
     "editor.suggest.showFunctions": false,
     "editor.suggest.showReferences": false, 
-    "editor.suggest.showVariables": false,    
+    "editor.suggest.showVariables": false,
+    "editor.parameterHints.enabled": false,
+    "editor.suggest.shareSuggestSelections": false,
 }
 ```
 
