@@ -76,7 +76,14 @@
 ## tests 폴더
 
 - 기본이 되는 베이스를 완성해놨습니다.
-- 테스트를 추가 하면서 공부해 보세요.
+- 🔥 테스트를 추가하거나 변경하고 싶은 경우 따라하시면 됩니다.
+- `git rm` 명령어로 commit 대상에서 tests 폴더를 제외합니다.
+- 더 이상 tests 폴더의 변경 사항은 기록되지 않습니다.
+- 이제 마음껏 테스트를 추가 하면서 공부해 보세요.
+
+```bash
+$ git rm --cached tests
+```
 
 <br/>
 
@@ -94,8 +101,8 @@
     "editor.suggest.showFunctions": false,
     "editor.suggest.showReferences": false, 
     "editor.suggest.showVariables": false,
-    "editor.parameterHints.enabled": false,
     "editor.suggest.shareSuggestSelections": false,
+    "editor.parameterHints.enabled": false,
 }
 ```
 
@@ -198,6 +205,11 @@ pytest --id=아이디 -m ch_챕터번호
 
 # 특정 문제만 test
 pytest --id=아이디 -k 'test_001'
+```
+
+🔥 테스트 코드를 추가 싶으신 경우 아래의 명령어를 입력해주세요
+```bash
+$ git rm --cached tests
 ```
 
 <br/>
