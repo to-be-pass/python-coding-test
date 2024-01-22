@@ -1,6 +1,6 @@
 # 저장소 전용 - 베이스 test가 변경 방지
 .vscode/
-
+tests/
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
