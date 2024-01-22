@@ -14,8 +14,10 @@ RUN git clone --single-branch --branch main https://github.com/to-be-pass/python
     mv /tmp/repo/tests /tests && \
     rm -rf /tmp/repo
 
-ARG TEST_NUM=""
+ARG TEST_ID=""
+ENV TEST_ID=${TEST_ID}
 
+ARG TEST_NUM=""
 ENV TEST_NUM=${TEST_NUM}
 
-CMD sh -c "pytest -k '$TEST_NUM'"
+CMD sh -c "pytest --id=$TEST_ID -k '$TEST_NUM'"

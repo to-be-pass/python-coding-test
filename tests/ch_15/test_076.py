@@ -2,6 +2,8 @@ import pytest
 
 import importlib
 
+from tests.utils.check import check_integrity, DummyRequest
+
 
 @pytest.fixture(name="module")
 def setup_module(user_id, func):
@@ -10,13 +12,24 @@ def setup_module(user_id, func):
     return importlib.import_module(path)
 
 
+@pytest.fixture(name="integrity_module")
+def setup_integrity(func):
+    path = func(__file__, "dremdeveloper")
+
+    return importlib.import_module(name=path)
+
+
 @pytest.fixture(
     name="test_input",
     params=[
         ([[1, 2, 3, 5], [5, 6, 7, 8], [4, 3, 2, 1]], 16),
     ],
 )
-def setup(request):
+def setup(request, integrity_module):
+    check_integrity(
+        DummyRequest(request.param, request.param_index),
+        integrity_module.solution,
+    )
     return request.param
 
 
