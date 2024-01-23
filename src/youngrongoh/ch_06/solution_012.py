@@ -1,13 +1,14 @@
 def solution(prices):
-  stack = list(reversed(prices))
-  answer = []
+  answer = [0] * len(prices)
   
+  stack = [0]
+  for i in range(1, len(prices)):
+    while stack and prices[stack[-1]] > prices[i]:
+      top = stack.pop()
+      answer[top] = i - top
+    stack.append(i)
+
   while stack:
-    price = stack.pop()
-    sec = 0
-    for i in range(len(stack), 0, -1):
-      sec += 1
-      if price > stack[i-1]:
-        break 
-    answer.append(sec)
+    top = stack.pop()
+    answer[top] = len(prices) - 1 - top
   return answer
