@@ -1,12 +1,18 @@
 def solution(s):
-    pair = {
+    # 추가 테스트 케이스
+    # s = '{'
+    # s = '}'
+    length = len(s)
+    if length == 1:
+        return 0
+
+    bracket_pairs = {
         ")": "(",
         "}": "{",
         "]": "[",
     }
 
     # 괄호 회전하면서 = 길이 - 1 만큼 회전?
-    length = len(s)
     cnt = 0
     for start in range(length):
         stack = []
@@ -19,7 +25,7 @@ def solution(s):
                 stack.append(ch)
             # 2. ) } ] , 닫는 문자열은 pop
             else:
-                if not stack or stack[-1] != pair.get(ch):
+                if not stack or stack[-1] != bracket_pairs.get(ch):
                     break
                 stack.pop()
 
