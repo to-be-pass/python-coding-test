@@ -1,11 +1,13 @@
 def solution(prices):
+  stack = list(reversed(prices))
   answer = []
   
-  for i in range(len(prices)):
+  while stack:
+    price = stack.pop()
     sec = 0
-    for j in range(i+1, len(prices)):
+    for i in range(len(stack), 0, -1):
       sec += 1
-      if prices[i] > prices[j]:
-        break
+      if price > stack[i-1]:
+        break 
     answer.append(sec)
   return answer
