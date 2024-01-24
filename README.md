@@ -102,6 +102,7 @@ $ git rm --cached tests
     "editor.suggest.showFunctions": false,
     "editor.suggest.showReferences": false, 
     "editor.suggest.showVariables": false,
+    "editor.suggest.showMethods": false,
     "editor.suggest.shareSuggestSelections": false,
     "editor.parameterHints.enabled": false,
 }
@@ -174,7 +175,7 @@ git checkout -b 아이디/문제번호
 
 <br/>
 
-## 3. solution 파일 생성 
+## 3. solution 파일 생성
 
 1. `src/아이디` 경로 아래에 해당 챕터 폴더를 넣어줘야 합니다. 넣는 방법은 간단합니다.
 2. `solutions`에 각 챕터별로 파일과 함수를 미리 만들어져 있습니다.
@@ -283,6 +284,8 @@ git push origin 아이디/문제번호
 $ git checkout solutions
 
 $ git pull origin solutions
+
+$ git checkout -b 아이디/다음문제
 ```
 
 <br/>
