@@ -1,21 +1,23 @@
 def solution(board, moves):
+  n = len(board)
   answer = 0
-  stack = []
-  for m in moves:
-    j = m - 1
-    doll = 0
-    for i in range(len(board)):
-      pos = board[i][j]
+  stacks = [[] for _ in [0] * n]
+  for i in range(n):
+    for j in range(n):
+      pos = board[n-1-j][i]
       if pos == 0:
-        continue
-      else:
-        doll = pos
-        board[i][j] = 0
         break
-    if stack and doll == stack[-1]:
-      stack.pop()
-      answer += 2
+      stacks[i].append(pos)
+
+  dolls = []
+  for m in moves:
+    stack = stacks[m - 1]
+    if not stack:
       continue
-    elif doll != 0:
-      stack.append(doll)
-  return answer
+    doll = stack.pop()
+    if dolls and doll == dolls[-1]:
+      dolls.pop()
+      answer += 1
+    else:
+      dolls.append(doll)
+  return answer * 2
