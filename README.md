@@ -117,6 +117,16 @@ $ git rm --cached tests
 
 <br/>
 
+## PR 코멘트 정리하기
+
+<img src="asset/img/clean_comment.png" alt="Alt text" width="750px" height="auto" />
+
+- 매시간 마다 자신의 PR 중에서 😕 리액션이 붙은 코멘트는 삭제됩니다.
+- 깃허브 봇이 작성한 코멘트도 정리 가능합니다.
+- 필요 없는 PR 코멘트는 정리하세요!
+
+<br/>
+
 # ✨ 여기서 부터 해당 저장소를 사용하는 방법입니다.
 
 ## 시작 앞서 드리는 말씀
@@ -244,7 +254,7 @@ git push origin 아이디/문제번호
 
 ## 7. ✨ 깃허브 PR(Pull Request) 생성 ✨
 
-<img src="asset/img/pr.png" alt="Alt text" width="550px" height="auto" />
+<img src="asset/img/pr.png" alt="Alt text" width="750px" height="auto" />
 
 - PR 을 작성하면 문제에 대해서 기록을 남길수 있는 탬플릿이 제공 됩니다!
 - 풀지 못한 문제도 PR 을 남기고 스스로 코멘트를 달아가면서 풀어가는 과정까지 기록 해보세요!
@@ -259,13 +269,13 @@ git push origin 아이디/문제번호
 - 어디서 어떤 값때문에 실패했는지 로컬에서 디버깅 해보고 스스로 코멘트를 남겨봅시다!
 - 도움이 필요하면 라벨을 붙여서 다들 사람에게 도움을 요청해 보세요!
 
-<img src="asset/img/help_me.png" alt="Alt text" width="550px" height="auto" />
+<img src="asset/img/help_me.png" alt="Alt text" width="750px" height="auto" />
 
 <br/>
 
 ## 8-2. PR 테스트 성공 시 : Merge 하기
 
-<img src="asset/img/merge.png" alt="Alt text" width="550px" height="auto" />
+<img src="asset/img/merge.png" alt="Alt text" width="750px" height="auto" />
 
 - 테스트를 통과하면 깃허브에서 `solutions` 브랜치에 `merge`합니다.
 - `Merge pull request` 버튼을 클릭 하면 됩니다!
