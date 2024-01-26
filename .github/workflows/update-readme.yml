@@ -2,7 +2,7 @@ name: Update README User Status
 
 on:
   schedule:
-    - cron: '0 */1 * * *'  # 매일, 매 시간 마다 실행
+    - cron: '0 0 * * *'  # 매일 0시 정각에 실행
     
 jobs:
   update-pr-list:

@@ -20,6 +20,6 @@ def get_pass_label_count(repo):
                 }
 
             if "Pass" in [label.name for label in pr.labels]:
-                users[id][cnt] += 1
+                users[id]["cnt"] += 1
 
     return users
