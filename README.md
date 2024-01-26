@@ -1,3 +1,15 @@
+# ✨ 함께 공부하는 사람들 ✨
+<details>
+    <summary>문제 풀고 있는 사람들 보기</summary>
+
+<!-- PR Status Start -->
+
+<!-- PR Status End -->
+
+</details>
+
+<br/>
+
 # TO-BE 저장소로 공부하는 방법
 
 > ✨이 저장소는 '코딩 테스트 합격자 되기(파이썬 편)' 을 연습 할 수 있는 저장소입니다. <br/>

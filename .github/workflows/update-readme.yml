@@ -1,0 +1,26 @@
+name: Update README User Status
+
+on:
+  schedule:
+    - cron: '0 */1 * * *'  # 매일, 매 시간 마다 실행
+    
+jobs:
+  update-pr-list:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyGithub
+
+      - name: Run Python script
+        run: python ./script/update_readme.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}
