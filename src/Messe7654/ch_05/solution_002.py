@@ -1,4 +1,6 @@
-def solution(lst : list[int]) -> list[int]:
+from typing import List
+
+def solution(lst : List[int]) -> List[int]:
     '''
     배열의 중복값을 제거하고, 내림차순으로 정렬해서 반환하는 함수
     '''
