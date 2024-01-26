@@ -7,7 +7,6 @@ def get_pass_label_count(repo):
 
     for pr in open_prs:
         if pr.user in pr.assignees:
-            cnt = 0
             id = pr.user.login
 
             if not users.get(id):
