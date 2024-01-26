@@ -95,18 +95,48 @@ $ git rm --cached tests
 - 폴더 안에 `settings.json` 파일을 만들고 아래의 설정을 추가합니다.
 - `.vscode/settings.json` 파일에 아래의 내용이 있으면 제대로 설정됐습니다!
 
+<details>
+    <summary>settings.json 설정값 자세히</summary>
+
+<!-- summary 아래 한칸 공백 두고 내용 삽입 -->
 ```json
 {
-    "editor.suggest.showModules": false, 
-    "editor.suggest.showClasses": false,
-    "editor.suggest.showFunctions": false,
-    "editor.suggest.showReferences": false, 
-    "editor.suggest.showVariables": false,
-    "editor.suggest.showMethods": false,
-    "editor.suggest.shareSuggestSelections": false,
-    "editor.parameterHints.enabled": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.suggest.showConstants": false,
+  "editor.suggest.showConstructors": false,
+  "editor.suggest.showCustomcolors": false,
+  "editor.suggest.showDeprecated": false,
+  "editor.suggest.showEnumMembers": false,
+  "editor.suggest.showEnums": false,
+  "editor.suggest.showEvents": false,
+  "editor.suggest.showFields": false,
+  "editor.suggest.showFiles": false,
+  "editor.suggest.showFolders": false,
+  "editor.suggest.showFunctions": false,
+  "editor.suggest.showInterfaces": false,
+  "editor.suggest.showIssues": false,
+  "editor.suggest.showKeywords": false,
+  "editor.suggest.showMethods": false,
+  "editor.suggest.showModules": false,
+  "editor.suggest.showOperators": false,
+  "editor.suggest.showProperties": false,
+  "editor.suggest.showReferences": false,
+  "editor.suggest.showSnippets": false,
+  "editor.suggest.showStructs": false,
+  "editor.suggest.showTypeParameters": false,
+  "editor.suggest.showUnits": false,
+  "editor.suggest.showUsers": false,
+  "editor.suggest.showValues": false,
+  "editor.suggest.showVariables": false,
+  "editor.suggest.showWords": false,
+  "editor.suggest.showClasses": false,
+  "editor.suggest.showColors": false
 }
 ```
+
+</details>
+
 
 <br/>
 
