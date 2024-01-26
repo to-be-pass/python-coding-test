@@ -5,18 +5,15 @@ def solution(prices):
 
     stack = []
     for idx, prev_price in enumerate(prices):
+        stack.append(idx)
+
         if idx == length - 1:
-            stack.append(idx)
             break
 
         next_price = prices[idx + 1]
 
-        # 1. 주식 가격이 떨어지지 않으면 계속 스택에 인덱스값을 저장한다.
-        if prev_price <= next_price:
-            stack.append(idx)
-        # 2. 주식 가격이 떨어지면 스택에 저장되어 있는 인덱스의 값들을 확인하고
-        else:
-            stack.append(idx)
+        # 1. 주식 가격이 떨어지는 경우
+        if prev_price > next_price:
             while True:
                 # 3. 떨어지는 값보다 인덱스에 있는 값이 더 큰 경우
                 if stack and prices[stack[-1]] > next_price:
