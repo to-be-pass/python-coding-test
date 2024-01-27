@@ -27,7 +27,7 @@ def get_pass_label_count(repo):
     solved_users = {id: info for id, info in pr_users.items() if info["cnt"] > 0}
 
     sorted_users = OrderedDict(
-        sorted(solved_users.items(), key=lambda _, info: info["cnt"], reverse=True)
+        sorted(solved_users.items(), key=lambda x: x[1]["cnt"], reverse=True)
     )
 
     return OrderedDict(sorted_users)
