@@ -1,7 +1,10 @@
+from collections import OrderedDict
+
+
 def get_pass_label_count(repo):
     open_prs = repo.get_pulls(state="all")
 
-    users = {}
+    pr_users = {}
     SERVER_URL = "https://github.com"
     REPOSITORY = "to-be-pass/python-coding-test"
 
@@ -9,8 +12,8 @@ def get_pass_label_count(repo):
         if pr.user in pr.assignees:
             id = pr.user.login
 
-            if not users.get(id):
-                users[id] = {
+            if not pr_users.get(id):
+                pr_users[id] = {
                     "id": id,
                     # "name": pr.user.name,
                     "img": pr.user.avatar_url,
@@ -19,10 +22,11 @@ def get_pass_label_count(repo):
                 }
 
             if "Pass" in [label.name for label in pr.labels]:
-                users[id]["cnt"] += 1
+                pr_users[id]["cnt"] += 1
 
-    return sorted(
-        [user for user in users if user["cnt"] > 0],
-        key=lambda user: user["cnt"],
-        reverse=True,
+    solved_users = {id: info for id, info in pr_users.items() if info["cnt"] > 0}
+    sorted_users = sorted(
+        solved_users.items(), key=lambda _, info: info["cnt"], reverse=True
     )
+
+    return OrderedDict(sorted_users)
