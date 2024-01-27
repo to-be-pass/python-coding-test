@@ -1,4 +1,6 @@
-def solution(numbers : list[int]) -> list[int]:
+from typing import List
+
+def solution(numbers : List[int]) -> List[int]:
     '''
     INPUT : 정수 배열 numbers
     OUTPUT: numbers에서 서로 다른 index를 가지는 2개의 수를 뽑아 더해 만들 수 있는
