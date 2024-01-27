@@ -12,7 +12,7 @@ def get_pass_label_count(repo):
             if not users.get(id):
                 users[id] = {
                     "id": id,
-                    "name": pr.user.name,
+                    # "name": pr.user.name,
                     "img": pr.user.avatar_url,
                     "url": f"{SERVER_URL}/{REPOSITORY}/pulls?q=is%3Apr+author%3A{id}+assignee%3A{id}",
                     "cnt": 0,
