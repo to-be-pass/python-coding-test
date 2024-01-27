@@ -8,13 +8,13 @@ def solution(n, k, cmd):
         elif c[0] == 'D':
             pointer += int(c[2:])
         elif c[0] == 'C':
-            table.pop(pointer)
+            table.pop()
             delete_stack.append(pointer)
             if len(table) == pointer:
                 pointer -= 1
         else:
             top = delete_stack.pop()
-            table.insert(top, 0)
+            table.append(0)
             if top <= pointer:
                 pointer += 1
     while delete_stack:
