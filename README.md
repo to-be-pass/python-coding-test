@@ -2,6 +2,11 @@
 <details>
     <summary>문제 풀고 있는 사람들 보기</summary>
 
+- 하루에 한번 문제 풀이 현황이 업데이트 됩니다.
+- 한개 이상 문제를 Pass 하신 경우에 표시 됩니다.
+- 많이 푸신 분 순서대로 표시됩니다.
+- 모두 85개 + 15개 푸실때 까지 화이팅입니다!
+
 <!-- PR Status Start -->
 
 <table style="border: 2px solid black; width: 100%; border-collapse: collapse"><tr><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 14 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/64844815?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">youngrongoh</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3Ayoungrongoh+assignee%3Ayoungrongoh>풀이 보러가기</a></p></div></td><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 13 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/44606727?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">tiaz0128</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3Atiaz0128+assignee%3Atiaz0128>풀이 보러가기</a></p></div></td><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 2 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/138415806?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">Messe7654</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3AMesse7654+assignee%3AMesse7654>풀이 보러가기</a></p></div></td></tr>
