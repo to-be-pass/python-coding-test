@@ -1,4 +1,4 @@
-name: Update README User Status
+name: Update README Users
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ on:
 #     - cron: '0 0 * * *'  # 매일 0시 정각에 실행
     
 jobs:
-  update-pr-list:
+  update-readme-users:
     runs-on: ubuntu-latest
 
     steps:
