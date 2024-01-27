@@ -1,24 +1,28 @@
 def solution(n, k, cmd):
-    table = [0] * n
-    pointer = k
-    delete_stack = []
-    for c in cmd:
-        if c[0] == 'U':
-            pointer -= int(c[2:])
-        elif c[0] == 'D':
-            pointer += int(c[2:])
-        elif c[0] == 'C':
-            table.pop()
-            delete_stack.append(pointer)
-            if len(table) == pointer:
-                pointer -= 1
-        else:
-            top = delete_stack.pop()
-            table.append(0)
-            if top <= pointer:
-                pointer += 1
-    while delete_stack:
-        top = delete_stack.pop()
-        table.insert(top, 1)
+    up = [i - 1 for i in range(n + 2)]  
+    down = [i + 1 for i in range(n + 2)]
+    pointer = k + 1
 
-    return ''.join(['O' if x == 0 else 'X' for x in table])
+    deleted = []
+    for c in cmd:
+        if c == 'C':
+            down[up[pointer]] = down[pointer]
+            up[down[pointer]] = up[pointer]
+            deleted.append(pointer)
+            pointer = down[pointer] if down[pointer] <= n else up[pointer]
+        elif c == 'Z':
+            restore = deleted.pop()
+            down[up[restore]] = restore
+            up[down[restore]] = restore
+        else:
+            [dir, amount] = c.split()
+            for _ in range(int(amount)):
+                if dir == 'U':
+                  pointer = up[pointer]
+                else:
+                  pointer = down[pointer]
+    print(deleted)
+    result = ['O'] * n
+    for i in deleted:
+        result[i - 1] = 'X'
+    return ''.join(result)
