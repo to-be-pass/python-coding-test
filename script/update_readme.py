@@ -45,7 +45,7 @@ def get_updated_data(pass_label_counts):
         col += 1
         if col == 1:
             updated_data += "<tr>" + avatar_html.format(**info, total=total)
-        elif col == 4:
+        elif col == 5:
             col = 0
             updated_data += avatar_html.format(**info, total=total) + "</tr>"
         else:
