@@ -1,15 +1,15 @@
 name: Update README Users
 
 on:
-  # schedule:
-  #   - cron: '0 0 * * *'  # 매일 0시 정각에 실행
+  schedule:
+    - cron: '0 0 * * *'  # 매일 0시 정각에 실행
 
-  workflow_dispatch:
-    inputs:
-      custom_parameter:
-        description: 'Did you disable the protection?'
-        required: true
-        default: 'Umm...I will check it'
+  # workflow_dispatch:
+  #   inputs:
+  #     custom_parameter:
+  #       description: 'Did you disable the protection?'
+  #       required: true
+  #       default: 'Umm...I will check it'
     
 jobs:
   update-readme-users:
