@@ -1,20 +1,18 @@
-from collections import deque
+import math
 def solution(progresses, speeds):
-    queue = deque([[progresses[i], speeds[i], i] for i in range(len(progresses))])
+    n = len(progresses)
+    days_left = [math.ceil((100 - progresses[i]) / speeds[i]) for i in range(n)]
     result = []
-    front = 0
-    rear = len(queue) - 1
+
     deploy = 0
-    while queue:
-        item = queue.popleft()
-        item[0] += item[1]
-        if item[0] >= 100 and item[2] == front:
-            front += 1
+    deploy_day = days_left[0]
+    for i in range(n):
+        if deploy_day >= days_left[i]:
             deploy += 1
         else:
-            queue.append(item)
-        if item[2] == rear:
-            if deploy > 0:
-                result.append(deploy)
-            deploy = 0
+            result.append(deploy)
+            deploy = 1
+            deploy_day = days_left[i]
+        if i == n - 1:
+            result.append(deploy)
     return result
