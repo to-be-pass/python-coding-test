@@ -1,25 +1,24 @@
-from collections import deque
+import math
 
 
 def solution(progresses, speeds):
-    pq = deque(zip(progresses, speeds))
+    answer = []
+
+    n = len(progresses)
+
+    days_left = [math.ceil((100 - progresses[i]) / speeds[i]) for i in range(n)]
+    max_left = days_left[0]
+    cnt = 0
+
     stack = []
 
-    while pq:
-        for idx, (pro, speed) in enumerate(pq):
-            pq[idx] = (pro + speed, speed)
-
-        cnt = 0
-        for item in pq:
-            if item[0] >= 100:
-                cnt += 1
-            else:
-                break
-
-        if cnt > 0:
-            for _ in range(cnt):
-                pq.popleft()
-
+    for day in days_left:
+        if day <= max_left:
+            cnt += 1
+        else:
             stack.append(cnt)
+            cnt = 1
+            max_left = day
 
+    stack.append(cnt)
     return stack
