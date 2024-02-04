@@ -11,6 +11,6 @@ def solution(record):
             users[user_id] = alias[0]
 
         if command in ["Enter", "Leave"]:
-            answer.append("{" + user_id + "}" + command_string[command])
+            answer.append((user_id, "{0}" + command_string[command]))
 
-    return [row.format(**users) for row in answer]
+    return [string.format(users[user_id]) for user_id, string in answer]
