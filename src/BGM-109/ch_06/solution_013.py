@@ -3,12 +3,7 @@ def is_valid_matrix(n):
         raise Exception('보드의 범위가 올바르지 않습니다.')
 
 def rotate_matrix(arr):
-    n = len(arr)
-    matrix = [[0] * n for _ in range(0, n)]
-    for i in range(0, n):
-        for j in range(0, n):
-            matrix[i][j] = arr[j][i]    
-    return matrix
+    return [list(col) for col in zip(*arr)]
     
 # moves 배열의 크기는 1 이상 1,000 이하입니다.
 def solution(board, moves):
