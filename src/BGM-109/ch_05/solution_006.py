@@ -1,3 +1,4 @@
+
 def solution(N, stages):
     mole, denom = [0] * N, [0] * N 
     for s in stages:
