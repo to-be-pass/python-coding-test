@@ -1,35 +1,50 @@
 def solution(lst, search_lst):
-    tree = []
+    tree = BST()
     for value in lst:
-        insert(tree, value, 0)
+        tree.insert(value)
+    
     answer = []
     for value in search_lst:
-        answer.append(find(tree, value, 0))
+        answer.append(tree.search(value))
     return answer
 
 
-def find(tree, value, idx):
-    if idx >= len(tree) or not tree[idx]:
+class Node:
+    def __init__(self, value):
+        self.left = None
+        self.right = None
+        self.value = value
+
+class BST:
+    def __init__(self):
+        self.root = None
+
+    def insert(self, value):
+        if not self.root:
+            self.root = Node(value)
+            return
+        curr = self.root
+        while curr:
+            if curr.value > value:
+                if curr.left:
+                    curr = curr.left
+                else:
+                    curr.left = Node(value)
+                    break
+            else:
+                if curr.right:
+                    curr = curr.right
+                else:
+                    curr.right = Node(value)
+                    break
+        
+    def search(self, value):
+        curr = self.root
+        while curr:
+            if curr.value == value:
+                return True
+            if curr.value > value:
+                curr = curr.left
+            else:
+                curr = curr.right
         return False
-    
-    if tree[idx] > value:
-        return find(tree, value, idx * 2 + 1)
-    elif tree[idx] < value:
-        return find(tree, value, idx * 2 + 2)
-    else:
-        return True
-
-def insert(tree, value, idx):
-    if idx >= len(tree) or not tree[idx]:
-        blank = idx - (len(tree) - 1)
-        if blank > 0:
-            tree.extend([None] * blank)
-        tree[idx] = value
-        return
-
-    if tree[idx] > value:
-        insert(tree, value, idx * 2 + 1)
-    else:
-        insert(tree, value, idx * 2 + 2)
-    return
-
