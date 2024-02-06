@@ -25,41 +25,35 @@ class BinaryTree:
 
         return self.root
 
+    def traversal(self, type, root):
+        self.result = []
+
+        if type == "pre":
+            self.pre_order(root)
+        elif type == "in":
+            self.in_order(root)
+        elif type == "post":
+            self.post_order(root)
+
+        return self.result
+
     def pre_order(self, node):
-
         if node:
-            if node.val == 1:
-                self.result = []
-
             self.result.append(node.val)
             self.pre_order(node.left)
             self.pre_order(node.right)
 
-        return self.result
-
     def in_order(self, node):
-
         if node:
-            if node.val == 1:
-                self.result = []
-
             self.in_order(node.left)
             self.result.append(node.val)
             self.in_order(node.right)
 
-        return self.result
-
     def post_order(self, node):
-
         if node:
-            if node.val == 1:
-                self.result = []
-
             self.post_order(node.left)
             self.post_order(node.right)
             self.result.append(node.val)
-
-        return self.result
 
 
 def solution(nodes):
@@ -67,7 +61,7 @@ def solution(nodes):
     root = tree.make_tree(nodes)
 
     return [
-        " ".join(map(str, tree.pre_order(root))),
-        " ".join(map(str, tree.in_order(root))),
-        " ".join(map(str, tree.post_order(root))),
+        " ".join(map(str, tree.traversal("pre", root))),
+        " ".join(map(str, tree.traversal("in", root))),
+        " ".join(map(str, tree.traversal("post", root))),
     ]
