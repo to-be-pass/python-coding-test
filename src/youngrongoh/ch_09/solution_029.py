@@ -1,14 +1,12 @@
 def solution(enroll, referral, seller, amount):
-    seller_amount = dict(zip(seller, amount))
-    parent_rel = dict(zip(enroll, referral))
-    totals = { name: 0 for name in enroll }
-    for name in enroll:
-        sale = 0
-        if name in seller_amount:
-            sale = seller_amount[name] * 100
-        curr = name
-        while sale > 0 and curr != '-':
-            totals[curr] += sale - sale // 10
-            sale = sale // 10
-            curr = parent_rel[curr]
-    return list(totals.values())
+    parent = dict(zip(enroll, referral))
+    salary = { name: 0 for name in enroll }
+    for i in range(len(seller)):
+        curr = seller[i]
+        money = amount[i] * 100
+        while money > 0 and curr != '-':
+            salary[curr] += money - money // 10
+            money //= 10
+            curr = parent[curr]
+
+    return [salary[name] for name in enroll]
