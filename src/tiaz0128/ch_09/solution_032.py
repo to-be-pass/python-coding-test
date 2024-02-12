@@ -107,8 +107,4 @@ def solution(nodeinfo):
     tree = Tree()
     root = tree.build_tree(nodeinfo)
 
-    return [
-        tree.traversal("pre", root),
-        tree.traversal("in", root),
-        tree.traversal("post", root),
-    ]
+    return [tree.traversal("pre", root), tree.traversal("post", root)]
