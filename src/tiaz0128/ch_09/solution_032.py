@@ -26,32 +26,34 @@ class Tree:
         root = None
 
         for val, x, y in nodes:
+            new_node = Node(val, x, y)
+
             if root is None:
-                root = Node(val, x, y)
+                root = new_node
             else:
                 parent = root
-                node = Node(val, x, y)
-
                 while True:
-                    if node.x < parent.x:
+                    if new_node.x < parent.x:
                         if parent.has_left():
                             parent = parent.left
-                            continue
-                        parent.left = node
-                        break
+                        else:
+                            parent.left = new_node
+                            break
                     else:
                         if parent.has_right():
                             parent = parent.right
-                            continue
-                        parent.right = node
-                        break
+                        else:
+                            parent.right = new_node
+                            break
+
         return root
 
     def traversal(self, type, root):
         self.arr = []
+
         if type == "pre":
             return self.pre_order(root)
-        elif type == "in":
+        if type == "in":
             return self.in_order(root)
         elif type == "post":
             return self.post_order(root)
