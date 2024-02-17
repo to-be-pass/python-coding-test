@@ -1,7 +1,5 @@
-from collections import Counter
-
-
 def solution(nums):
-    counter = Counter(nums)
+    num_set = set(nums)
+    k = nums // 2
 
-    return len(counter.most_common(len(nums) // 2))
+    return min(len(num_set), k)
