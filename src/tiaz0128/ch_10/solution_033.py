@@ -29,4 +29,4 @@ def solution(k, operations):
         elif operator == "f":
             find(parents, *nodes)
 
-    return set(find(parents, i) for i in range(k))
+    return len(set(find(parents, i) for i in range(k)))
