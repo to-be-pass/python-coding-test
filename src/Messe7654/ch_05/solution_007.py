@@ -3,7 +3,7 @@ def isIn(coord):
     return -5 <= x and x <= 5 and -5 <= y and y <= 5
 
 def solution(dirs):
-    history = set() # stores before -> after
+    history = set() # stores before <-> after
     xpos, ypos = 0, 0
 
     for movement in dirs:
@@ -19,5 +19,6 @@ def solution(dirs):
             before = (xpos, ypos)
             xpos, ypos = after
             history.add((before, after))
+            history.add((after, before))
 
-    return len(history)
+    return len(history) // 2
