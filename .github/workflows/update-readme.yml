@@ -1,0 +1,33 @@
+name: Update README Users
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 매일 0시 정각에 실행
+
+  # workflow_dispatch:
+  #   inputs:
+  #     custom_parameter:
+  #       description: 'Did you disable the protection?'
+  #       required: true
+  #       default: 'Umm...I will check it'
+    
+jobs:
+  update-readme-users:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install PyGithub
+
+      - name: Run Python script
+        run: python ./script/update_readme.py ${{ secrets.GITHUB_TOKEN }} ${{ github.repository }}

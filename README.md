@@ -1,3 +1,23 @@
+# ✨ 함께 공부하는 사람들 ✨
+<details>
+    <summary>문제 풀고 있는 사람들 보기</summary>
+
+- 하루에 한번 문제 풀이 현황이 업데이트 됩니다.
+- 한개 이상 문제를 Pass 하신 경우에 표시 됩니다.
+- 많이 푸신 분 순서대로 표시됩니다.
+- 모두 85개 + 15개 푸실때 까지 화이팅입니다!
+
+<!-- PR Status Start -->
+
+<table style="border: 2px solid black; width: 100%; border-collapse: collapse"><tr><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 34 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/64844815?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">youngrongoh</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3Ayoungrongoh+assignee%3Ayoungrongoh>풀이 보러가기</a></p></div></td><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 32 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/44606727?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">tiaz0128</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3Atiaz0128+assignee%3Atiaz0128>풀이 보러가기</a></p></div></td><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 10 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/138415806?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">Messe7654</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3AMesse7654+assignee%3AMesse7654>풀이 보러가기</a></p></div></td><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 5 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/34917143?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">BGM-109</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3ABGM-109+assignee%3ABGM-109>풀이 보러가기</a></p></div></td><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 2 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/57593704?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">dayaelee</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3Adayaelee+assignee%3Adayaelee>풀이 보러가기</a></p></div></td></tr><tr><td style="text-align: center; vertical-align: middle; padding: 20px"><div><p align="center">🍀 1 / 85</p></div><div><p align="center"><img src="https://avatars.githubusercontent.com/u/59790777?v=4" style="width: 100px; height: 100px; border-radius: 50%;"/></p></div><div><p align="center">kshjessica</p></div><div><p align="center"><a href=https://github.com/to-be-pass/python-coding-test/pulls?q=is%3Apr+author%3Akshjessica+assignee%3Akshjessica>풀이 보러가기</a></p></div></td></tr>
+</table>
+
+<!-- PR Status End -->
+
+</details>
+
+<br/>
+
 # TO-BE 저장소로 공부하는 방법
 
 > ✨이 저장소는 '코딩 테스트 합격자 되기(파이썬 편)' 을 연습 할 수 있는 저장소입니다. <br/>
@@ -95,17 +115,48 @@ $ git rm --cached tests
 - 폴더 안에 `settings.json` 파일을 만들고 아래의 설정을 추가합니다.
 - `.vscode/settings.json` 파일에 아래의 내용이 있으면 제대로 설정됐습니다!
 
+<details>
+    <summary>settings.json 설정값 자세히</summary>
+
+<!-- summary 아래 한칸 공백 두고 내용 삽입 -->
 ```json
 {
-    "editor.suggest.showModules": false, 
-    "editor.suggest.showClasses": false,
-    "editor.suggest.showFunctions": false,
-    "editor.suggest.showReferences": false, 
-    "editor.suggest.showVariables": false,
-    "editor.suggest.shareSuggestSelections": false,
-    "editor.parameterHints.enabled": false,
+  "explorer.compactFolders": false,
+  "explorer.confirmDragAndDrop": false,
+  "editor.suggest.showConstants": false,
+  "editor.suggest.showConstructors": false,
+  "editor.suggest.showCustomcolors": false,
+  "editor.suggest.showDeprecated": false,
+  "editor.suggest.showEnumMembers": false,
+  "editor.suggest.showEnums": false,
+  "editor.suggest.showEvents": false,
+  "editor.suggest.showFields": false,
+  "editor.suggest.showFiles": false,
+  "editor.suggest.showFolders": false,
+  "editor.suggest.showFunctions": false,
+  "editor.suggest.showInterfaces": false,
+  "editor.suggest.showIssues": false,
+  "editor.suggest.showKeywords": false,
+  "editor.suggest.showMethods": false,
+  "editor.suggest.showModules": false,
+  "editor.suggest.showOperators": false,
+  "editor.suggest.showProperties": false,
+  "editor.suggest.showReferences": false,
+  "editor.suggest.showSnippets": false,
+  "editor.suggest.showStructs": false,
+  "editor.suggest.showTypeParameters": false,
+  "editor.suggest.showUnits": false,
+  "editor.suggest.showUsers": false,
+  "editor.suggest.showValues": false,
+  "editor.suggest.showVariables": false,
+  "editor.suggest.showWords": false,
+  "editor.suggest.showClasses": false,
+  "editor.suggest.showColors": false
 }
 ```
+
+</details>
+
 
 <br/>
 
@@ -113,6 +164,16 @@ $ git rm --cached tests
 
 - 문제와 매칭되는 정답을 적는 폴더 파일 구성 및 매개변수를 받아오는 함수를 미리 만들어 두었습니다.
 - 문제를 풀기 시작 할때 해당하는 폴더와 파일을 가져와서 사용하시면 됩니다.
+
+<br/>
+
+## PR 코멘트 정리하기
+
+<img src="asset/img/clean_comment.png" alt="Alt text" width="750px" height="auto" />
+
+- 매시간 마다 자신의 PR 중에서 😕 리액션이 붙은 코멘트는 삭제됩니다.
+- 깃허브 봇이 작성한 코멘트도 정리 가능합니다.
+- 필요 없는 PR 코멘트는 정리하세요!
 
 <br/>
 
@@ -174,10 +235,10 @@ git checkout -b 아이디/문제번호
 
 <br/>
 
-## 3. solution 파일 생성 
+## 3. solution 파일 생성
 
 1. `src/아이디` 경로 아래에 해당 챕터 폴더를 넣어줘야 합니다. 넣는 방법은 간단합니다.
-2. `solutions`에 각 챕터별로 파일과 함수를 미리 만들어져 있습니다.
+2. `solutions`에 각 챕터별로 파일과 함수가 미리 만들어져 있습니다.
 3. `src/아이디/해당챕터` 를 만들고 `solution_문제번호.py` 파일을 복사해서 넣으세요!
 4. `src/아이디/해당챕터/solution_문제번호.py` 세팅됐다면 제대로 하셨습니다!
 
@@ -185,7 +246,7 @@ git checkout -b 아이디/문제번호
 
 ## 4. solution 함수 작성
 
-1. 문제 번호에 맞는 정답 함수를 `test_문제번호` 파일에 작성합니다.
+1. 문제 번호에 맞는 정답 함수를 조금전 세팅했던 `solution_문제번호.py` 파일에 작성합니다.
 2. 함수명은 `solution`입니다.
 3. 프로그래머스와 동일하게 정답을 리턴하는 함수를 작성합니다.
 
@@ -194,9 +255,10 @@ git checkout -b 아이디/문제번호
 ## 5-1. 로컬에서 pytest 로 확인
 
 1. `pytest`, `python-dotenv`를 설치합니다.
-2. 아래의 명령어로 `pytest`를 실행합니다.
-3. 실행 옵션은 자신의 아이디 와 해당 챕터입니다.
-4. 특정 문제만 테스트 할 수도 있습니다.
+2. /to-be-pass-python-coding-test 폴더로 이동합니다. (/ch_0*와 같은 폴더에서는 오류가 발생합니다.)
+3. 아래의 명령어로 `pytest`를 실행합니다.
+4. 실행 옵션은 자신의 아이디 와 해당 챕터입니다.
+5. 특정 문제만 테스트 할 수도 있습니다.
 
 ```shell
 pip install pytest python-dotenv
@@ -243,7 +305,7 @@ git push origin 아이디/문제번호
 
 ## 7. ✨ 깃허브 PR(Pull Request) 생성 ✨
 
-<img src="asset/img/pr.png" alt="Alt text" width="550px" height="auto" />
+<img src="asset/img/pr.png" alt="Alt text" width="750px" height="auto" />
 
 - PR 을 작성하면 문제에 대해서 기록을 남길수 있는 탬플릿이 제공 됩니다!
 - 풀지 못한 문제도 PR 을 남기고 스스로 코멘트를 달아가면서 풀어가는 과정까지 기록 해보세요!
@@ -258,13 +320,13 @@ git push origin 아이디/문제번호
 - 어디서 어떤 값때문에 실패했는지 로컬에서 디버깅 해보고 스스로 코멘트를 남겨봅시다!
 - 도움이 필요하면 라벨을 붙여서 다들 사람에게 도움을 요청해 보세요!
 
-<img src="asset/img/help_me.png" alt="Alt text" width="550px" height="auto" />
+<img src="asset/img/help_me.png" alt="Alt text" width="750px" height="auto" />
 
 <br/>
 
 ## 8-2. PR 테스트 성공 시 : Merge 하기
 
-<img src="asset/img/merge.png" alt="Alt text" width="550px" height="auto" />
+<img src="asset/img/merge.png" alt="Alt text" width="750px" height="auto" />
 
 - 테스트를 통과하면 깃허브에서 `solutions` 브랜치에 `merge`합니다.
 - `Merge pull request` 버튼을 클릭 하면 됩니다!
@@ -283,6 +345,8 @@ git push origin 아이디/문제번호
 $ git checkout solutions
 
 $ git pull origin solutions
+
+$ git checkout -b 아이디/다음문제
 ```
 
 <br/>
