@@ -6,7 +6,7 @@ def day_work(pro, sp):
 
 def solution(progresses, speeds):
     # 예상 작업 기간 리스트 
-    days = [math.ceil((100 - p) / s)for p, s in zip(progresses, speeds)]
+    days = [math.ceil((100 - p) / s) for p, s in zip(progresses, speeds)]
     
     # 큐 
     q = deque(days) 
