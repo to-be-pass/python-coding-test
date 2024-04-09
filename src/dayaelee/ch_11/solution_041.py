@@ -17,6 +17,7 @@ def solution(graph, source):
                     predecessor[injeopNode] = v
     
     # 음의 순환 구하기 
+                     # 음의 순환 구하기  # 음의 순환 구하기  # 음의 순환 구하기  # 음의 순환 구하기  # 음의 순환 구하기  # 음의 순환 구하기  # 음의 순환 구하기  # 음의 순환 구하기  # 음의 순환 구하기  # 음의 순환 구하기 
                     
     for v, nodeSet in enumerate(graph):
         for injeopNodeSet in nodeSet:
