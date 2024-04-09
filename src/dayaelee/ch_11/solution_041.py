@@ -27,4 +27,3 @@ def solution(graph, source):
 
     return [distances, predecessor]
 
-#dd
