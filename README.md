@@ -121,37 +121,12 @@ $ git rm --cached tests
 <!-- summary 아래 한칸 공백 두고 내용 삽입 -->
 ```json
 {
-  "explorer.compactFolders": false,
-  "explorer.confirmDragAndDrop": false,
-  "editor.suggest.showConstants": false,
-  "editor.suggest.showConstructors": false,
-  "editor.suggest.showCustomcolors": false,
-  "editor.suggest.showDeprecated": false,
-  "editor.suggest.showEnumMembers": false,
-  "editor.suggest.showEnums": false,
-  "editor.suggest.showEvents": false,
-  "editor.suggest.showFields": false,
-  "editor.suggest.showFiles": false,
-  "editor.suggest.showFolders": false,
-  "editor.suggest.showFunctions": false,
-  "editor.suggest.showInterfaces": false,
-  "editor.suggest.showIssues": false,
-  "editor.suggest.showKeywords": false,
-  "editor.suggest.showMethods": false,
-  "editor.suggest.showModules": false,
-  "editor.suggest.showOperators": false,
-  "editor.suggest.showProperties": false,
-  "editor.suggest.showReferences": false,
-  "editor.suggest.showSnippets": false,
-  "editor.suggest.showStructs": false,
-  "editor.suggest.showTypeParameters": false,
-  "editor.suggest.showUnits": false,
-  "editor.suggest.showUsers": false,
-  "editor.suggest.showValues": false,
-  "editor.suggest.showVariables": false,
-  "editor.suggest.showWords": false,
-  "editor.suggest.showClasses": false,
-  "editor.suggest.showColors": false
+    "editor.inlineSuggest.enabled": false,
+    "python.autoComplete.extraPaths": [],
+    "python.analysis.autoSearchPaths": false,
+    "python.analysis.diagnosticMode": "openFilesOnly",
+    "python.analysis.useLibraryCodeForTypes": false,
+    "python.languageServer": "None"
 }
 ```
 
