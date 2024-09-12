@@ -1,2 +1,5 @@
+from collections import Counter
+
+
 def solution(participant, completion):
-    return
+    return list(Counter(participant) - Counter(completion))[0]
